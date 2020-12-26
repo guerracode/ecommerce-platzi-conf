@@ -11,8 +11,7 @@ const Payment = () => {
   const history = useHistory();
 
   const paypalOptions = {
-    clientId:
-      'access_token$sandbox$wyv3bg7h66cynpdq$c4b37d23424cfa51ac0ffc715b8965ab',
+    clientId: 'sb',
     intent: 'capture',
     currency: 'USD',
   };
@@ -23,7 +22,6 @@ const Payment = () => {
   };
 
   const handlePaymentSuccess = (data) => {
-    console.log(data);
     if (data.status === 'COMPLETED') {
       const newOrder = {
         buyer,
